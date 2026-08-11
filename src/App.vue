@@ -30,7 +30,7 @@ const projects = [
 		name: '헥토그룹 셀링부스터',
 		desc: '마켓 트렌드부터 성과 리포트까지 연결하는 셀러 데이터 플랫폼',
 		color: 'violet',
-		image: '../public/assets/sellingbooster.png',
+		image: '/assets/sellingbooster.png',
 		url: 'https://sellingbooster.io/',
 	},
 	{
@@ -39,7 +39,7 @@ const projects = [
 		name: 'NE능률 NE Tutor',
 		desc: '진단·처방·교수학습·평가를 연결하는 대한민국 대표 티칭 플랫폼',
 		color: 'orange',
-		image: '../public/assets/netutor.png',
+		image: '/assets/netutor.png',
 		url: 'https://www.netutor.co.kr/',
 	},
 	{
@@ -48,7 +48,7 @@ const projects = [
 		name: 'CG인바이츠 인바이츠루프',
 		desc: '건강정보와 일상을 연결하는 디지털 헬스케어 서비스',
 		color: 'blue',
-		image: '../public/assets/invitesloop.png',
+		image: '/assets/invitesloop.png',
 		url: 'https://www.invitesloop.com/',
 	},
 	{
@@ -57,7 +57,7 @@ const projects = [
 		name: '법무법인 광장',
 		desc: '전문성과 신뢰를 명료하게 전달하는 법무법인 공식 웹사이트',
 		color: 'stone',
-		image: '../public/assets/leeko.png',
+		image: '/assets/leeko.png',
 		url: 'https://www.leeko.com/',
 	},
 ];
