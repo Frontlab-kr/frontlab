@@ -11,11 +11,11 @@ const mobileOpen = ref(false);
 const reducedMotion = ref(false);
 
 const scenes = [
-	{ from: 0, to: 0.2, title: '사용자에게 필요한 기능을\n먼저 정의합니다.' },
-	{ from: 0.18, to: 0.4, title: '정보와 기능을\n명확한 구조로 정리합니다.' },
-	{ from: 0.38, to: 0.6, title: '누구나 쉽게 사용할 수 있는\nUI를 디자인합니다.' },
-	{ from: 0.58, to: 0.8, title: '디자인을 빠르고 안정적인\n웹으로 개발합니다.' },
-	{ from: 0.78, to: 1.01, title: 'UI/UX 디자인부터\n프론트엔드 개발까지.', final: true },
+	{ from: 0, to: 0.2, title: '프로젝트에 필요한\n제작 인력을 채웁니다.' },
+	{ from: 0.18, to: 0.4, title: 'UI/UX 디자인만\n맡기셔도 됩니다.' },
+	{ from: 0.38, to: 0.6, title: '웹 퍼블리싱과\n프론트엔드 개발도 가능합니다.' },
+	{ from: 0.58, to: 0.8, title: '필요한 범위만큼\n외부 제작팀으로 함께합니다.' },
+	{ from: 0.78, to: 1.01, title: '외주 UI/UX 디자인부터\n프론트엔드 개발까지.', final: true },
 ];
 
 const currentScene = computed(() => {
@@ -66,19 +66,19 @@ const services = [
 	{
 		no: '01',
 		name: 'UI/UX 디자인',
-		desc: '사용자의 흐름과 비즈니스 목표를 연결해 직관적이고 아름다운 디지털 경험을 설계합니다.',
+		desc: '기획서와 요구사항을 바탕으로 사용자 흐름을 정리하고, 실제 개발이 가능한 화면과 디자인 시스템을 제작합니다.',
 		tags: ['사용자 경험 전략', 'UI 디자인', '프로토타입', '디자인 시스템'],
 	},
 	{
 		no: '02',
 		name: '웹 퍼블리싱',
-		desc: '디자인의 디테일을 놓치지 않으면서 모든 화면에서 빠르고 접근 가능한 웹으로 구현합니다.',
+		desc: '전달받은 디자인을 기준으로 디테일을 살리고, 모든 화면에서 안정적으로 작동하는 반응형 웹을 구현합니다.',
 		tags: ['반응형 웹', '인터랙션', '웹 접근성', '마크업'],
 	},
 	{
 		no: '03',
 		name: '프론트엔드 개발',
-		desc: '운영과 확장을 고려한 컴포넌트 구조로 안정적인 제품을 개발하고 실제 서비스에 연결합니다.',
+		desc: 'Vue·React 기반의 컴포넌트 구조와 API 연동으로 운영과 확장이 가능한 실제 서비스를 개발합니다.',
 		tags: ['Vue', 'React', 'Nuxt', 'API 연동'],
 	},
 ];
@@ -171,7 +171,7 @@ onBeforeUnmount(() => {
 				<button @click="scrollToId('#services')">서비스</button>
 				<button @click="scrollToId('#about')">소개</button>
 			</nav>
-			<button class="contact-link" @click="scrollToId('#contact')">프로젝트 문의</button>
+			<button class="contact-link" @click="scrollToId('#contact')">협업 문의</button>
 			<button
 				class="menu-button"
 				:class="{ 'menu-button--open': mobileOpen }"
@@ -185,7 +185,7 @@ onBeforeUnmount(() => {
 				<button @click="scrollToId('#work')">프로젝트</button>
 				<button @click="scrollToId('#services')">서비스</button>
 				<button @click="scrollToId('#about')">소개</button>
-				<button @click="scrollToId('#contact')">문의</button>
+				<button @click="scrollToId('#contact')">협업 문의</button>
 			</div>
 		</header>
 
@@ -204,7 +204,7 @@ onBeforeUnmount(() => {
 								<h1>{{ scenes[currentScene].title }}</h1>
 								<div v-if="scenes[currentScene].final" class="hero-actions">
 									<button class="button button--light" @click="scrollToId('#work')">작업 사례 보기</button>
-									<button class="button button--ghost" @click="scrollToId('#contact')">프로젝트 문의</button>
+									<button class="button button--ghost" @click="scrollToId('#contact')">협업 문의</button>
 								</div>
 							</div>
 						</Transition>
@@ -226,8 +226,8 @@ onBeforeUnmount(() => {
 			<section id="work" class="section section--light work-section">
 				<div class="section-head reveal-block">
 					<span class="kicker">주요 프로젝트</span>
-					<h2>문제를 해결하고<br />경험을 바꾼 작업들.</h2>
-					<p>화면을 만드는 데서 그치지 않습니다.<br />사용자와 비즈니스에 필요한 변화를 구현합니다.</p>
+					<h2>맡겨주신 프로젝트를<br />완성도 있게 구현합니다.</h2>
+					<p>기업 웹사이트와 디지털 서비스의<br />프론트엔드 개발·웹 퍼블리싱을 수행한 사례입니다.</p>
 				</div>
 
 				<div class="project-list">
@@ -262,7 +262,7 @@ onBeforeUnmount(() => {
 			<section id="services" class="section services-section">
 				<div class="section-head section-head--dark">
 					<span class="kicker">제공 서비스</span>
-					<h2>설계부터 구현까지,<br />하나의 흐름으로.</h2>
+					<h2>디자인만, 개발만,<br />또는 처음부터 끝까지.</h2>
 				</div>
 				<div class="service-list">
 					<article v-for="service in services" :key="service.no" class="service-row">
@@ -279,11 +279,11 @@ onBeforeUnmount(() => {
 			</section>
 
 			<section id="about" class="section section--accent about-section">
-				<div class="about-label"><span>작은 팀.</span><span>높은 완성도.</span></div>
+				<div class="about-label"><span>외부 제작팀.</span><span>내부 팀처럼.</span></div>
 				<div class="about-copy">
 					<span class="kicker">FrontLAB 소개</span>
-					<h2>두 명의 실무자가<br />처음부터 끝까지<br />직접 함께합니다.</h2>
-					<p>적은 커뮤니케이션 단계, 빠른 판단, 높은 실행 밀도. 디자인과 개발의 경계를 넘나들며 실제로 작동하는 결과를 만듭니다.</p>
+					<h2>필요한 순간,<br />바로 함께할 수 있는<br />외부 제작팀입니다.</h2>
+					<p>에이전시와 기업의 프로젝트에 UI/UX 디자이너와 프론트엔드 개발자가 직접 참여합니다. 필요한 업무 범위와 일정에 맞춰 유연하게 협업합니다.</p>
 				</div>
 				<div class="team-grid">
 					<article>
@@ -309,11 +309,11 @@ onBeforeUnmount(() => {
 
 			<section id="contact" class="section contact-section">
 				<div>
-					<span class="kicker">프로젝트 문의</span>
-					<h2>만들고 싶은<br />제품이 있나요?</h2>
+					<span class="kicker">외주·협업 문의</span>
+					<h2>프로젝트에 필요한<br />제작 인력이 있나요?</h2>
 				</div>
 				<div class="contact-side">
-					<p>아직 정리되지 않은 아이디어도 괜찮습니다.<br />현재 단계부터 편하게 들려주세요.</p>
+					<p>디자인만, 개발만 또는 전체 제작도 가능합니다.<br />업무 범위와 일정을 보내주시면 검토 후 답변드립니다.</p>
 					<a class="contact-email" href="mailto:contact@frontlab.kr" @click="trackEmail">
 						<span>contact@frontlab.kr</span>
 						<span class="material-symbols-rounded" aria-hidden="true">mail</span>
